@@ -84,6 +84,61 @@
             width: 80%;
         }
 
+        /* Special Register Button */
+        .register-btn {
+            background: linear-gradient(135deg, #ff0080 0%, #5865f2 100%);
+            color: white !important;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 8px 25px rgba(255, 0, 128, 0.3);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .register-btn:hover {
+            background: linear-gradient(135deg, #5865f2 0%, #ff0080 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(255, 0, 128, 0.4);
+        }
+
+        .register-btn::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, #ff0080, #5865f2, #ff0080);
+            background-size: 400%;
+            border-radius: 30px;
+            z-index: -1;
+            animation: glowing 3s ease-in-out infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .register-btn:hover::before {
+            opacity: 1;
+        }
+
+        .register-btn::after {
+            display: none;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 8px 25px rgba(255, 0, 128, 0.3);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 12px 30px rgba(255, 0, 128, 0.4);
+            }
+        }
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -353,6 +408,7 @@
                 <li><a href="#" class="nav-link">Beranda</a></li>
                 <li><a href="#about" class="nav-link">Tentang Kami</a></li>
                 <li><a href="#contact" class="nav-link">Kontak</a></li>
+                <li><a href="register.html" class="nav-link">Register</a></li>
             </ul>
         </div>
     </nav>
@@ -363,6 +419,22 @@
             <h1>Top Up Game Mudah & Cepat</h1>
             <p>Layanan top up game terpercaya dengan proses instan dan harga terbaik. Dukung gaming experience Anda dengan mudah!</p>
             <a href="#topup" class="cta-button">Top Up Sekarang</a>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>Tentang Kami</h2>
+            <p>Kami adalah layanan top up game terpercaya dengan proses instan dan harga terbaik. Dukung gaming experience Anda dengan mudah!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-content">
+            <h2>Kontak</h2>
+            <p>Untuk pertanyaan lebih lanjut, silakan hubungi kami di: <a href="mailto:info@topupgame.id">info@topupgame.id</a></p>
         </div>
     </section>
 
