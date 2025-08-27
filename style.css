@@ -34,6 +34,7 @@ body {
 
 .navbar .navbar-logo {
     font-family: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #fff;
     font-style: italic;
@@ -78,6 +79,7 @@ body {
 
 #hamburger-menu {
     display: none;
+    z-index: -1;
 }
 
 /* hero section */
@@ -160,7 +162,7 @@ body {
     .navbar .navbar-nav {
         top: 100%;
         right: -100%;
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.888);
         width: 30rem;
         height: 100vh;
         position: absolute;
@@ -191,5 +193,406 @@ body {
 @media (max-width: 450px) {
     html {
         font-size: 55%;
+    }
+}
+
+/* Login Section */
+.login-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    padding: 2rem;
+    margin-top: 6rem;
+}
+
+.login-container {
+    background: rgba(1, 1, 1, 0.9);
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 1px solid #67513c;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.login-header p {
+    color: #ccc;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #67513c;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.form-group input::placeholder {
+    color: #888;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 3.2rem;
+    color: #888;
+    width: 18px;
+    height: 18px;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    color: #ccc;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    margin-right: 0.5rem;
+    accent-color: var(--primary);
+}
+
+.forgot-password {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #fff;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.login-btn:hover {
+    background-color: #a57a4f;
+}
+
+.register-link {
+    text-align: center;
+}
+
+.register-link p {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.register-link a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #fff;
+}
+
+/* Responsive Design for Login */
+@media (max-width: 768px) {
+    .login-section {
+        padding: 1rem;
+        margin-top: 5rem;
+    }
+    
+    .login-container {
+        padding: 2rem;
+    }
+    
+    .login-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .login-container {
+        padding: 1.5rem;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .forgot-password {
+        margin-left: 0;
+    }
+}
+
+/* Registration Section */
+.register-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    padding: 2rem;
+    margin-top: 6rem;
+}
+
+.register-container {
+    background: rgba(1, 1, 1, 0.9);
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 1px solid #67513c;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.register-header h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.register-header p {
+    color: #ccc;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.register-btn:hover {
+    background-color: #a57a4f;
+}
+
+.login-link {
+    text-align: center;
+}
+
+.login-link p {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #fff;
+}
+
+.terms-link {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.terms-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Responsive Design for Registration */
+@media (max-width: 768px) {
+    .register-section {
+        padding: 1rem;
+        margin-top: 5rem;
+    }
+    
+    .register-container {
+        padding: 2rem;
+    }
+    
+    .register-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .register-container {
+        padding: 1.5rem;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+}
+
+/* Menu Section */
+.menu {
+    margin-top: 50px; /* Adjust the menu position downwards */
+    padding: 2rem 7%;
+}
+
+.menu h1 {
+    font-size: 3rem;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.menu-item {
+    background: rgba(1, 1, 1, 0.8);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #67513c;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(182, 137, 91, 0.3);
+}
+
+.menu-item h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.menu-item p {
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.menu-item p:last-of-type {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.menu-item button {
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.menu-item button:hover {
+    background-color: #a57a4f;
+}
+
+/* Responsive Design for Menu */
+@media (max-width: 768px) {
+    .menu-items {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .menu-item {
+        padding: 1.5rem;
+    }
+    
+    .menu-item h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .menu-item {
+        padding: 1rem;
+    }
+    
+    .menu-item h2 {
+        font-size: 1.6rem;
+    }
+    
+    .menu-item p {
+        font-size: 1rem;
+    }
+    
+    .menu-item button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
     }
 }
